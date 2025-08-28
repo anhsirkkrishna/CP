@@ -1,0 +1,7 @@
+Link to question: https://www.codechef.com/problems/MARKP
+
+There was a string like '111001' and I had to see if '1' or '11' was there in it.
+My solution: if '1' in string_a or '11' in string_a:
+
+Better solution: if any(target in string_a for target in ['1', '11']):
+This is better for large strings or lists as well and is more logical that comparing them separately.
