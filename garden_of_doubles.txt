@@ -1,0 +1,1 @@
+I was doing everything right. The logic was correct. But still, 3 test cases were coming wrong. This was because the integer was getting too big value. So, use long long when you have to use int.
