@@ -1,0 +1,25 @@
+tl;dr: CP problem creators make problems that make unordered sets worse than sets. So, ignore unordered set and use set instead.
+
+The reason why unordered_set is giving a Time Limit Exceeded (TLE) error while set (ordered set) is not comes down to hash collisions and worst-case complexity.
+
+Key Points
+set in C++ is typically implemented as a balanced binary search tree (e.g., Red-Black Tree) and hence guarantees 
+O(logN) time per insertion, making total construction from a vector 
+O(NlogN).
+
+unordered_set uses a hash table and has average O(1) insertion, leading to 
+O(N) expected total complexity to insert all elements.
+
+However, the worst case for unordered_set is
+O(N^2). If the hash function is poor or the dataset contains many values that hash to the same bucket, the hash table rapidly degrades to a linked list. Each insertion or search can then become 
+O(N), resulting in TLE for large or adversarial inputs.
+
+In competitive programming and some test environments, the test data may intentionally cause many hash collisions (for example, all values are large or crafted to hash similarly), causing unordered_set to perform poorly, while set keeps delivering predictable performance due to its tree structure.
+
+Conclusion
+If unordered_set in a particular problem gives TLE but set works, it's likely because of excessive hash collisions leading to quadratic behavior in unordered_set, while set's tree-based structure avoids this pitfall and remains efficient.
+
+Recommendations
+For adversarial or unknown input, prefer set to avoid hash collision-related TLE.
+
+In critical applications with hash tables, consider using custom hash functions or libraries like gp_hash_table from GNU pbds for better performance guarantees.
