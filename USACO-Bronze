@@ -1,0 +1,8 @@
+1. Distinct Numbers: Instead of creating a vector and inserting the element if the desired element is not there, use a set or a multiset.
+
+- Avoid using multiset or unordered_map. Kabhi bhi kat sakta hai tumhara.
+
+2. Apartments: Try thinking of an optimised approach. This question shows that the optimised approach is very close to the actual approach.
+  You just have to think of it. In TLE, there is a high chance that slightly changing how you execute your idea can give you a good solution.
+3. Concert Tickets: I learnt about multiset, upper bound and how to use them in questions. I also learnt insert and erase is faster and used commonly.
+  So, when you want to edit the list, use vector and 
