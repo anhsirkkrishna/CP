@@ -1,5 +1,8 @@
 tl;dr: CP problem creators make problems that make unordered sets worse than sets. So, ignore unordered set and use set instead.
 
+# Explaination of the below lines:
+There are different alternatives of vector we can use. It is in VectorAlternatives.txt.
+
 The reason why unordered_set is giving a Time Limit Exceeded (TLE) error while set (ordered set) is not comes down to hash collisions and worst-case complexity.
 
 Key Points
@@ -23,3 +26,4 @@ Recommendations
 For adversarial or unknown input, prefer set to avoid hash collision-related TLE.
 
 In critical applications with hash tables, consider using custom hash functions or libraries like gp_hash_table from GNU pbds for better performance guarantees.
+
