@@ -1,0 +1,3 @@
+I wanted that if k is more than the len of the string, then I don't want extra no.
+I didn't make the logic correct and just thought that I need to do %.
+The question was a 15 - 20 min code including thinking. But this small wrong logic wasted my 3 hours.
