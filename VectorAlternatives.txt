@@ -1,0 +1,12 @@
+There are different alternatives of vector:
+
+1. Set: This is used if we want all the numbers in ascending order and all of them should be unique.
+2. Unordered Set: This is used if we want unique numbers but we want them in the given order. Not ascending.
+3. Multiset: This is used if you want the numbers in ascending order but not unique numbers.
+
+Inserting in each:
+
+1. Vector: O(1): Because we just put the elemet at the end of the vector.
+2. Set: O(logN): Because it uses binary search to search the value bigger than the number we want to insert. Then insert that number before that.
+3. Unordered Set: O(N): Because the only thing we want to check is if the number we want to insert is already there or not.
+4. Multiset: O(logN): Same logic as set. The only difference is that here you don't have all unique elements.
