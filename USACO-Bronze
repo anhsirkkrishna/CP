@@ -4,5 +4,9 @@
 
 2. Apartments: Try thinking of an optimised approach. This question shows that the optimised approach is very close to the actual approach.
   You just have to think of it. In TLE, there is a high chance that slightly changing how you execute your idea can give you a good solution.
+
+- This question's approach is called two pointer. This is because we are declaring 2 indexes for 2 different arrays and we are going to the next index but not coming back.
+I didn't know this name when I saw this question. But this is a good question of two pointer.
+
 3. Concert Tickets: I learnt about multiset, upper bound and how to use them in questions. I also learnt insert and erase is faster and used commonly.
   So, when you want to edit the list, use vector and 
