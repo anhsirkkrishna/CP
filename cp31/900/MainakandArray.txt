@@ -1,0 +1,1 @@
+In this problem, I didn't visualise that if there are 2 adjacent elements, a and b, and a is before b, if I shift the array so that b comes in the front, this makes b to come first and thus before a and not after a. This was important becuase I wanted to know the difference between the number that occured first - that occured second.
