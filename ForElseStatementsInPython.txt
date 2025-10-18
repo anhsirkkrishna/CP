@@ -1,0 +1,13 @@
+for i in d:
+    if d[i] >= 2:
+        print("YES")
+        break
+else:
+    print("NO")
+The else here is aligned with for (not with the if),
+because in Python, the else after a for or while loop
+is executed only if the loop completes normally without
+encountering a break. If you indent else under if, it
+becomes a conditional part of the if instead of being
+associated with the loop, which is incorrect for this
+control flow.
