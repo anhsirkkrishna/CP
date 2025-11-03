@@ -1,0 +1,4 @@
+For String, we don’t have to use find(s.begin… as we can find 1 char with this but not a substring.
+For that, we have to use s.find(“…”).
+This gives you the index of first occurrence of the substring.
+If the substring doesn’t exist, then s.find(“”) == string::npos.
