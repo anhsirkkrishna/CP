@@ -1,0 +1,2 @@
+lower_bound gives the first element strictly greater than x.
+upper_bound gives the first element greater than or equal to x.
