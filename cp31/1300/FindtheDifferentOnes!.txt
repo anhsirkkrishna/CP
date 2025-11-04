@@ -1,0 +1,241 @@
+This is a simple problem.
+But the implementation is very good.
+I want to remember this approach as it is useful for other questions in the future.
+
+// Summary of the question 
+// Summary of my approach
+// Summary of the editorial's approach
+// Why editorial's solution is very important to remember
+
+You are given an array a of n integers and q queries — each query gives a range [l, r].
+
+For each query, you must find any two indices i and j within [l, r] such that a[i] != a[j].
+If all elements in that range are the same → output -1 -1.
+Otherwise, print one valid pair (any is fine).
+
+a = [1, 1, 2, 2, 3]
+query (1, 3) → possible answer: 2 3  (since a[2] = 1, a[3] = 2)
+query (2, 2) → invalid (only one element) → -1 -1
+
+My approach:
+
+Tried to group the array into segments of consecutive equal elements.
+
+Used:
+
+set<int> s → to store the starting index of each new value block.
+
+map<int,int> mp → to store how many elements that block continues for.
+
+For each query [l, r], you used upper_bound in s to find the start of the segment that l belongs to.
+
+Then you checked:
+
+If [l, r] lies entirely in one block → output -1 -1.
+
+Else → output two indices from two different blocks.
+
+This approach conceptually works but:
+
+Implementation is verbose and a bit heavy for the problem.
+
+set + upper_bound and block tracking can be replaced by simpler precomputation.
+
+✅ Intuition you had is good: “find the nearest index before r where the element changes.”
+That’s exactly what the editorial does more cleanly.
+
+For every index i, store in an array p[i] the index of the last element before i that is different from a[i].
+
+Example:
+
+a = [1, 1, 2, 2, 3]
+p = [-1, -1, 1, 1, 3]
+
+Meaning:
+
+p[2] = 1 → at index 2 (0-based), the previous different element was at index 1.
+
+p[4] = 3 → at index 4, the previous different element was at index 3.
+
+Then for each query [l, r]:
+
+If p[r] < l → no element before r (within [l, r]) is different → all equal → -1 -1.
+
+Else → (p[r] + 1, r + 1) → gives two different elements.
+
+Example:
+a = [1, 1, 2, 2, 3]
+Query (2, 5) → l=1, r=4 (0-index)
+p[4] = 3, and p[4] >= l → print (p[r]+1, r+1) = (4, 5)
+
+
+// ----------------------------------------------------------------------
+//                   ██████╗ ██████╗ ██████╗ ███████╗
+//                  ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+//                  ██║     ██║   ██║██║  ██║█████╗
+//                  ██║     ██║   ██║██║  ██║██╔══╝
+//                  ╚██████╗╚██████╔╝██████╔╝███████╗
+//                   ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
+// ----------------------------------------------------------------------
+//                       Krishna'S CP TEMPLATE (Thank you Utkarsh Bhai)
+//                       "Think. Code. Conquer."
+// ----------------------------------------------------------------------
+// AVAILABLE FUNCTIONS AND TIME COMPLEXITIES:
+// - nCr(n, r): Combination calculator                    | O(r)
+// - sieve(n): Sieve of Eratosthenes (prime finder)       | O(n log log n)
+// - rf(n): Factors in a range                            | O(√n)
+// - primeFactor(n): Prime factorization of n             | O(√n * log n)
+// - gcd(a, b): Greatest Common Divisor                   | O(log(min(a, b)))
+// - factorial(n): Modular factorial                      | O(n)
+// - MEX(arr): Minimum Excluded Value                     | O(n log n)
+// - ps(arr): Prefix Sum                                   | O(n)
+// - inp: Input function for array                        | O(n)
+// - print: Output function for array                     | O(n)
+// ----------------------------------------------------------------------
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <unordered_map>
+#include <bit>
+#include <map>
+#include <set>
+#include <queue>
+#include <stack>
+#include <string>
+#include <iterator>
+#include <cmath>
+#include <iomanip>
+#include <climits>
+#include <cstdint>
+#include <cstdlib>
+using namespace std;
+
+#define ll long long
+#define int long long
+#define INT_MAX LLONG_MAX
+#define INT_MIN LLONG_MIN
+#define MOD 1000000007
+
+#define pb push_back
+#define all(v) v.begin(), v.end()
+#define rall(v) v.rbegin(), v.rend()
+#define sz(x) (int)(x).size()
+#define srt(v) sort(v.begin(), v.end())
+#define Rsrt(v) sort(v.begin(), v.end(), greater<int>())
+#define yes                \
+    cout << "YES" << endl; \
+    return;
+#define no                \
+    cout << "NO" << endl; \
+    return;
+#define endl "\n"
+#define F first
+#define S second
+#define vi vector<int>
+#define vc vector<char>
+#define vb vector<bool>
+#define vvi vector<vector<int>>
+#define pii pair<int, int>
+#define umap unordered_map
+#define mii map<int, int>
+#define fr(i, a, b) for (int i = a; i < b; i++)
+#define frr(i, a, b) for (int i = a; i > b; i--)
+#define mxe(v) *max_element(v.begin(), v.end())
+#define mne(v) *min_element(v.begin(), v.end())
+
+void solve()
+{
+    int n;
+    cin >> n;
+
+    set<int> s;
+    mii mp;
+
+    int li = 0;
+    int prev = -1;
+
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+
+        if (prev != x)
+        {
+            li = i;
+            s.insert(li);
+        }
+        mp[li]++;
+        prev = x;
+    }
+    for (int ele : s)
+    {
+        cout << ele << " ";
+    }
+    cout << endl;
+    for (auto ele : mp)
+    {
+        cout << ele.first << " " << ele.second << endl;
+    }
+
+    int q;
+    cin >> q;
+
+    for (int i = 0; i < q; i++)
+    {
+        int l, r;
+        cin >> l >> r;
+        l--, r--;
+
+        auto lb = --s.upper_bound(l);
+        int length = 1 + r - *lb;
+
+        if (length <= mp[*lb])
+        {
+            cout << "-1 -1" << endl;
+        }
+        else
+        {
+            cout << l + 1 << " " << *(++lb) + 1 << endl;
+        }
+    }
+    cout << endl;
+}
+int32_t main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    int t = 1;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
+    return 0;
+}
+
+// This is the solution given in the editorial.
+
+def solve():
+    n = int(input())
+    a = [int(x) for x in input().split()]
+    p = [-1] * n
+    for i in range(1, n):
+        p[i] = p[i - 1]
+        if a[i] != a[i - 1]:
+            p[i] = i - 1
+    for i in range(int(input())):
+        l, r = map(int, input().split())
+        l -= 1
+        r -= 1
+        if p[r] < l:
+            print("-1 -1")
+        else:
+            print(p[r] + 1, r + 1)
+    
+    
+t = int(input())
+for _ in range(t):
+    solve()
+    if _ + 1 != t:
+        print()
