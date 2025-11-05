@@ -1,0 +1,8 @@
+I had a map and I was asking for the key before the upperbound of 'ind + 1'.
+But the problem was that when upperbound returned the first element,
+previous one doesn't exist. But I was trying to access it.
+This thing was handled differently in vs code and codeforces.
+In vs code, it gives 0, 0 as the key, value when they don't exist.
+While codeforces gives INT_MAX, INT_MAX.
+This was making the code give different answer when I was running on vs code,
+vs when I was running on codeforces.
