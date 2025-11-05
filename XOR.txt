@@ -1,0 +1,10 @@
+XOR properties:
+1. ((a ^ b) ^ b) = a
+2. a ^ b = b ^ a
+3. a ^ 0 = a
+
+Q: Data Structures Fan
+This question uses all the properties. This is one of the best question to do.
+
+One implementation is that if we are given 3 numbers and you want odd one out,
+just xor the 3 numbers. You will get the odd one out.
