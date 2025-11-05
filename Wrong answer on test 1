@@ -1,3 +1,4 @@
+Incremental Path:
 I had a map and I was asking for the key before the upperbound of 'ind + 1'.
 But the problem was that when upperbound returned the first element,
 previous one doesn't exist. But I was trying to access it.
@@ -6,3 +7,9 @@ In vs code, it gives 0, 0 as the key, value when they don't exist.
 While codeforces gives INT_MAX, INT_MAX.
 This was making the code give different answer when I was running on vs code,
 vs when I was running on codeforces.
+
+Monocarp's String:
+If you do *upper_bound larger than the largest element, you get s.end().
+In vs code, you get a random integer.
+But in CF, it gives the length of the set.
+So, keep this in mind.
