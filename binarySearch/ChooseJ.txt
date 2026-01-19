@@ -1,0 +1,8 @@
+I took the j as a very big number.
+So, even though I used long long, I still couldn't get the real number.
+So, choose j wisely.
+
+what you can do is:
+j = 2
+while not check(j):
+  j *= 2
