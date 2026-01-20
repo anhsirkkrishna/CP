@@ -1,0 +1,27 @@
+To get answer in decimal, you don't need to do like i = start * 1e6 or stuff.
+  You just need to run a while loop.
+  You don't need to have the condition i < j or something.
+  Just run the loop for 100 times.
+  Because 2^100 is a very big number.
+  So, if we divide the search space by 2 100 times, i would be very precise.
+
+int main() {
+	int n,k;
+	cin>>n>>k;
+	vector<int> v(n);
+	for(auto &it: v) cin>>it;
+	double s = 0, e = *max_element(v.begin(),v.end());
+	
+    int x = 100;
+    while(x--){
+        double mid = (s + e)/2.0;
+        if(checker(mid, v,k)){
+            s = mid;
+        }else{
+            e = mid;
+        }
+    }
+    cout <<setprecision(7)<< s <<endl;
+	
+
+}
