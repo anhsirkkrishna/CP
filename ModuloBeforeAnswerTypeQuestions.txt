@@ -1,0 +1,8 @@
+In questions, it sometimes says that your answer might be too big which can lead to integer overflow.
+So, you should modulo every variable in that question.
+What you should actually do is see which variable is overflowing or can overflow and then apply mod whereever possible.
+Basically, it should never overflow.
+Mod it on every loop.
+Not just the final return.
+
+Like in make it alternating question.
