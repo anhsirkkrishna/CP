@@ -1,0 +1,291 @@
+Minimum queries
+Minimum queries are more difficult to process than sum queries. Still, there is
+a quite simple O(nlogn) time preprocessing method after which we can answer
+any minimum query in O(1) time1
+. Note that since minimum and maximum
+queries can be processed similarly, we can focus on minimum queries.
+The idea is to precalculate all values of minq(a,b) where b − a +1 (the length
+of the range) is a power of two. For example, for the array
+1 3 4 8 6 1 4 2
+0 1 2 3 4 5 6 7
+the following values are calculated:
+a b minq(a,b)
+0 0 1
+1 1 3
+2 2 4
+3 3 8
+4 4 6
+5 5 1
+6 6 4
+7 7 2
+a b minq(a,b)
+0 1 1
+1 2 3
+2 3 4
+3 4 6
+4 5 1
+5 6 1
+6 7 2
+a b minq(a,b)
+0 3 1
+1 4 3
+2 5 1
+3 6 1
+4 7 1
+0 7 1
+The number of precalculated values is O(nlogn), because there are O(logn)
+range lengths that are powers of two. The values can be calculated efficiently
+using the recursive formula
+minq(a,b) = min(minq(a,a+w−1),minq(a+w,b)),
+1This technique was introduced in [7] and sometimes called the sparse table method. There
+are also more sophisticated techniques [22] where the preprocessing time is only O(n), but such
+algorithms are not needed in competitive programming.
+85
+where b−a+1 is a power of two and w = (b−a+1)/2. Calculating all those values
+takes O(nlogn) time.
+After this, any value of minq(a,b) can be calculated in O(1) time as a minimum
+of two precalculated values. Let k be the largest power of two that does not exceed
+b − a+1. We can calculate the value of minq(a,b) using the formula
+minq(a,b) = min(minq(a,a+ k −1),minq(b − k +1,b)).
+In the above formula, the range [a,b] is represented as the union of the ranges
+[a,a+ k −1] and [b − k +1,b], both of length k.
+As an example, consider the range [1,6]:
+1 3 4 8 6 1 4 2
+0 1 2 3 4 5 6 7
+The length of the range is 6, and the largest power of two that does not exceed 6
+is 4. Thus the range [1,6] is the union of the ranges [1,4] and [3,6]:
+1 3 4 8 6 1 4 2
+0 1 2 3 4 5 6 7
+1 3 4 8 6 1 4 2
+0 1 2 3 4 5 6 7
+Since minq(1,4) = 3 and minq(3,6) = 1, we conclude that minq(1,6) = 1.
+
+Good. Then we reset completely and build it from the ground up. No shortcuts.
+
+---
+
+## Step 1: What problem are we solving?
+
+You have an array.
+
+Example:
+
+```
+A = [1, 3, 4, 8, 6, 1, 4, 2]
+```
+
+You want to answer questions like:
+
+> What is the minimum number between index `a` and index `b`?
+
+Example:
+
+```
+min between index 1 and 6 → answer = 1
+```
+
+If you scan every time, it takes **O(n)** per query. Too slow if there are many queries.
+
+So we **precompute** information once, then answer queries fast.
+
+---
+
+## Step 2: What does “power of two ranges” mean?
+
+Powers of two:
+
+```
+1, 2, 4, 8, 16, ...
+```
+
+Instead of computing minimums for *all* ranges, we only compute minimums for ranges whose **length** is a power of two.
+
+Examples of ranges:
+
+| length | example range |
+| ------ | ------------- |
+| 1      | [3,3]         |
+| 2      | [4,5]         |
+| 4      | [1,4]         |
+| 8      | [0,7]         |
+
+---
+
+## Step 3: Start with length = 1
+
+Length = 1 means a single element.
+
+So:
+
+```
+min(i, i) = A[i]
+```
+
+For `n` elements, we have **n** such ranges.
+
+Example:
+
+```
+min(0,0) = 1
+min(1,1) = 3
+...
+min(7,7) = 2
+```
+
+Count so far: **n values**
+
+---
+
+## Step 4: Length = 2
+
+Now ranges of length 2.
+
+Examples:
+
+```
+[0,1], [1,2], [2,3], ..., [6,7]
+```
+
+How many?
+
+```
+n - 1
+```
+
+Each minimum is computed from two length-1 ranges:
+
+```
+min(i, i+1) = min(A[i], A[i+1])
+```
+
+Count: **≈ n values**
+
+---
+
+## Step 5: Length = 4
+
+Ranges:
+
+```
+[0,3], [1,4], [2,5], [3,6], [4,7]
+```
+
+How many?
+
+```
+n - 3
+```
+
+Each one is computed from **two length-2 ranges**:
+
+```
+min(i, i+3) =
+    min( min(i, i+1), min(i+2, i+3) )
+```
+
+Count: **≈ n values**
+
+---
+
+## Step 6: Length = 8
+
+Ranges:
+
+```
+[0,7]
+```
+
+Count:
+
+```
+1
+```
+
+Again ≈ n in the worst case.
+
+---
+
+## Step 7: How many different lengths exist?
+
+Lengths used:
+
+```
+1, 2, 4, 8
+```
+
+That is:
+
+```
+log₂(n) + 1
+```
+
+So:
+
+| length | how many ranges |
+| ------ | --------------- |
+| 1      | ≈ n             |
+| 2      | ≈ n             |
+| 4      | ≈ n             |
+| 8      | ≈ n             |
+
+---
+
+## Step 8: Total amount of stored data
+
+Add them up:
+
+```
+n + n + n + ... (log n times)
+```
+
+That equals:
+
+```
+n × log n
+```
+
+That is **why preprocessing is O(n log n)**.
+
+Nothing more complex than counting boxes.
+
+---
+
+## Step 9: Why queries become fast
+
+Any range `[a, b]` can be covered by **two overlapping power-of-two ranges**.
+
+Example:
+
+```
+Query: [1,6]
+Length = 6
+Largest power of two ≤ 6 is 4
+```
+
+So we take:
+
+```
+[1,4] and [3,6]
+```
+
+Both have length 4 and are already precomputed.
+
+Answer:
+
+```
+min( min(1,4), min(3,6) )
+```
+
+Only **two table lookups**.
+
+---
+
+## Step 10: Key idea to remember
+
+1. We only store minimums for ranges of length `1, 2, 4, 8, ...`
+2. Each length covers the array about `n` times
+3. There are `log n` such lengths
+4. So total work = `n log n`
+5. Queries use **two precomputed values**
+
+That’s the whole method, fully stripped down.
