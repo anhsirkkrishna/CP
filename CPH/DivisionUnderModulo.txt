@@ -1,0 +1,3 @@
+Division under modulo is not the same as addition, subtraction, or multiplication.
+To divide involves multiplying by the modulo inverse, which only exists if $M$ and the value to be divided by are relatively prime.
+One way we could conceivably do this is if $M$ is prime itself.
