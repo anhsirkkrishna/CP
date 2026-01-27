@@ -1,0 +1,56 @@
+-> Generating subsets can be done by 2 ways:
+You can make a vector to keep storing the current subset.
+But that takes a lot of space.
+Instead, you can use binary number to do the same, where the digit would indicate if the bumber is included or not.
+
+-> Generating permutations:
+For every i, you can run a loop and one by one select one of the remaining numebrs.
+
+vi permutation = {};
+int n = 10;
+vb chosen(n);
+
+void search()
+{
+    if (permutation.size() == n)
+    {
+        debug(permutation);
+    }
+    else
+    {
+        for (int i = 0; i < n; i++)
+        {
+            if (chosen[i])
+                continue;
+            chosen[i] = true;
+            permutation.push_back(i);
+            search();
+            chosen[i] = false;
+            permutation.pop_back();
+        }
+    }
+}
+
+-> Optimisations:
+Even small conditions can reduce the search space by a lot. Like finding the different ways to go from 1 place to another. This is very unoptimised. But with some optimisation, it is very optimised for n = 7.
+
+-> Meet in the middle approach
+The meet-in-the-middle technique splits a search space into two roughly equal halves, performs independent searches on each, and combines results efficiently.
+It transforms an \(O(2^n)\) problem into \(O(2^{n/2})\) time, which is faster since \(2^{n/2}\) grows much slower than \(2^n\).
+
+### Key Example: Subset Sum Problem
+Given a list of \(n\) numbers and target \(x\), check if any subset sums to \(x\).
+
+- **Naive approach**: Generate all \(2^n\) subsets and check sums → \(O(2^n)\) time.
+- **Meet-in-the-middle**:
+  1. Split list into halves A and B (each ~\(n/2\) elements).
+  2. Compute all subset sums for A (\(S_A\), size \(2^{n/2}\)) and B (\(S_B\), size \(2^{n/2}\)).
+  3. Sort both lists in \(O(2^{n/2} \log(2^{n/2}))\) time (or use merge-like method).
+  4. For each sum \(s\) in \(S_A\), check if \(x - s\) exists in \(S_B\) using binary search → total \(O(2^{n/2})\).
+
+**Illustration**: List , \(x=15\).
+- A =  → \(S_A = [0,2,4,6]\)
+- B =  → \(S_B = [0,5,9,14]\)
+- 6 (from A) + 9 (from B) = 15 → Valid subset .
+
+For \(x=10\), no such pair exists.
