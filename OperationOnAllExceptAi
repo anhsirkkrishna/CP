@@ -1,0 +1,7 @@
+Let's say we need to do something to all the numbers in the array.
+But we don't want to do that for every i once.
+Like we need to find the gcd of all the numbers in the array.
+But, we want to exclude every element every time.
+For that, we do prefix and suffix array.
+Like we can make a prefix and suffix array.
+Then, we will exclude Ai and find gcd of pref_gcd[i-1] and suff_gcd(i+1).
