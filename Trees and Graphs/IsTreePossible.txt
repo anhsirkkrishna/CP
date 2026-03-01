@@ -1,0 +1,7 @@
+There is a theorem that if there is a graph that has all the elements connected,
+then there is always a spanning tree that you can make.
+
+You can make the spanning tree by ignoring the cyclic edges.
+Or, you can construct the graph so that it becomes in the tree.
+
+Question: https://codeforces.com/problemset/problem/2171/F
