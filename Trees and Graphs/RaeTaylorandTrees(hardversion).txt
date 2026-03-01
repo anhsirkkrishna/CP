@@ -1,0 +1,15 @@
+1. Approach: Make graph. Tree can be made from graph.
+2. Approach: I am given a list. I want to connect all. So, can I connect v[i] with something before and something after?
+  Lets say I connect to the farthest lesser to the left. Now, we are left with a decreasing array that can't be connected
+  to before. So, I will connect those numbers to the next mapped element so that I can that and the previous left with this
+  already mapped number.
+3. Approach: I am given a list. I want to connect all. So, can I connect v[i] with something before and something after?
+  Lets say I connect to the latest lesser to the left. Now, we are left with a decreasing array that can't be connected
+  to before. So, I will connect those numbers to the next mapped element so that I can that and the previous left with this
+  already mapped number.
+4. Implementation: One way is that I loop the number and the rest in front. Map them and make visited true. Leave the numebers
+  that are already mapped so that we don't have 2 parents. But, to clear decreasing array, we map that number to atleast 1
+  repeated number. End me check if the tree is valid. If yes, print the tree.
+5. Implementation: Next greater element wali stack but stack me extra bach jayenge. To uske liye set instead of stack. And
+  v[i] se chote sirf minimum number rehne do because baaki to v[i] ne connect kar hee diye. End me check if the tree is valid.
+  If yes, print the tree.
