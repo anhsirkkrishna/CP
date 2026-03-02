@@ -1,0 +1,10 @@
+https://codeforces.com/problemset/problem/2132/D
+
+The logic is very simple. But calculating is tough.
+You have to manipulate the number a lot and you have
+to calculate a lot of things and so on. It took me
+hours and still I couldn't solve the problem. I think
+I need to write the solution in detail on paper. But
+it is hard when you have to do a lot of complex things
+at the same time. Basically, hard calcuations, a lot
+of edge cases. Redo this to see where you can improve.
