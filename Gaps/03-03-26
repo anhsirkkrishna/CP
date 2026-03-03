@@ -1,0 +1,18 @@
+https://codeforces.com/problemset/problem/2152/C
+
+I thought of a solution which was wrong because I
+understood the question wrong. But, I got stuck at
+the implementation so I watched the solution. But it
+wasn't the same logic as mine. I didn't read the
+solution fully, but it certainly gave me a hint.
+Then, I thought of the solution by myself.
+
+The thing is that the question was easy. It was
+pattern recognition that you can do if you use
+you pen. If you form 3-4 test cases, you will
+automatically see the pattern.
+
+LEARNINGS: Create 3-5 testcases by yourself. You
+might see the pattern. Don't just go on thinking
+of some answer or pattern without making some
+testcases.
