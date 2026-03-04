@@ -1,0 +1,6 @@
+https://codeforces.com/contest/1666/problem/D
+
+We had to do operations on s to make t. Here,
+one way was to actually do what they are doing.
+This was easy. So, I should keep in mind that I
+can also do what they are doing.
