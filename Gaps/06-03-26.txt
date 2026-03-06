@@ -1,0 +1,11 @@
+https://codeforces.com/problemset/problem/2163/B
+
+I have seen that in hard rating questions, there are 2
+things that happen. One, that they say you have to do
+this and that, but actually, don't have to do anything.
+Because, the answer comes greedily. You can do it in 
+less or equal to the given moves without any problem.
+Or, you have to use the formula they give and convert it
+into another formula that you can use to solve the
+problem very easily. These are seen again and again in
+harder problems.
