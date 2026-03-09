@@ -1,0 +1,7 @@
+https://codeforces.com/contest/2202/problem/D
+
+We can think of the pair and consider the cases.
+u - unseen, s - seen.
+So, uu, ss, us, su. And, if us, 2 operations otherwise
+1 operation. This would solve the problem without
+relying of the test cases.
