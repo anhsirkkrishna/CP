@@ -4,3 +4,9 @@ This is a question of binary search. I didn't get
 it. I think I need to do binary search just because
 if some binary search question comes up, I won't be
 able to do it. Also, A lot of people say its imp.
+
+The thinking of this question is that if you can do
+the operations in any n, you will find the minimum n
+where you can still do the operations. This would give
+us the right answer. This is a binary search of answer
+question. I should do binary search on answer now.
