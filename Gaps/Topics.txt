@@ -2,3 +2,5 @@ Prefix Sum
 Greedy
 Constructive
 Ans-to-Question
+Bitwise Ops
+XOR
