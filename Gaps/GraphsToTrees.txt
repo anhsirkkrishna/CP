@@ -1,2 +1,2 @@
 1. I didn't know how that a connected graph means a tree is possible.
-Action> I need to do more trees and graphs qustion.
+Action> I need to do more trees and graphs question.
