@@ -1,4 +1,5 @@
-https://codeforces.com/problemset/problem/2138/A
+Problem: https://codeforces.com/problemset/problem/2138/A
+Pattern: Reasoning, Constructive, Ans-to-Ques
 
 I need to think that if I can't go from question to answer,
 I should go from answer to question. This is how the answer
