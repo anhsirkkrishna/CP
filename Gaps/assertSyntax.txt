@@ -1,0 +1,6 @@
+assert(cs>=0);
+
+In C++, assert(cs >= 0); is a debugging macro used to verify that a variable cs is
+non-negative (greater than or equal to 0) at a specific point in the program.
+If the condition cs >= 0 is false (i.e., cs is negative), the program will
+immediately print an error message to stderr and terminate via abort().
