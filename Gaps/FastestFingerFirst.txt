@@ -1,0 +1,4 @@
+https://codeforces.com/contest/1904/problem/B
+Topic missed: Prefix sum
+I did think of the solution by the editorial but my
+solution was complex. Took a lot of time to execute.
