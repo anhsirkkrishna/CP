@@ -1,0 +1,6 @@
+If the goal is deduplication from a vector, the fastest approach is often:
+
+sort(v.begin(), v.end());
+v.erase(unique(v.begin(), v.end()), v.end());
+
+O(n log n) but with much lower constant factors than std::set, since vectors are cache-friendly.
