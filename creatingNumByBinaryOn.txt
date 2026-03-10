@@ -1,0 +1,3 @@
+We can create a num by the syntax 1<<4 = 16;
+But, this will give integer overlflow even if you are storing in an int.
+So, use while loop for this work.
