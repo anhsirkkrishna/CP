@@ -1,0 +1,6 @@
+https://codeforces.com/contest/2203/problem/C
+
+This is a question of binary search. I didn't get
+it. I think I need to do binary search just because
+if some binary search question comes up, I won't be
+able to do it. Also, A lot of people say its imp.
