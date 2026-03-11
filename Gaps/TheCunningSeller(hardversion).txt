@@ -1,0 +1,21 @@
+https://codeforces.com/problemset/problem/2132/C2
+
+Topic: Maths, Implementation, Constructive
+Logic: Minimise binary powers(Like in that binary search question (Test Generator)).
+But here, I can easily do this without binary search.
+Trigger: Maths Equations, Minimise power of 3 or binary power.
+
+But: I got stuck on the implementation. I was doing small mistakes like
+I didn't think the whole implementation really and I was adding 2 in the
+binary for every 1 I was taking from the before one.
+But after 80, char ended and negative started. This ruined everythning.
+So, I just had to store the final in some other array which contained numbers not characters.
+But, I had to see the test cases for that. This is something that I should avoid.
+
+1. I did not check the internal working for lower test cases that I myself can create.
+  I should check some basic extreme cases. This is something that happens again and again and again.
+  I should eliminate this by making some small test cases of my own.
+2. I should write what I am doing step by step. Then, I should see how I will do it.
+  Like create the array on paper and do the thing till I find the answer. But remember,
+  I should take extreme test cases. There is definitely something in them.
+3. Keep in mind that if maths is happening, it is in numbers. chars don’t work.
