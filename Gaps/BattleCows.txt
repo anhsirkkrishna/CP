@@ -1,0 +1,4 @@
+https://codeforces.com/problemset/problem/1951/B
+
+Didn't think that we can also get the cow to the first place.
+This I only saw from the wrong testcase.
