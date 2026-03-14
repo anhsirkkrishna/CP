@@ -1,0 +1,8 @@
+https://codeforces.com/problemset/problem/2131/D
+
+Topics: Trees, leaves, implementation
+Logic: Count the number of leaves with depth greater than 1 for each node and output the minimum.
+Trigger: Trees question, involves leaves
+
+I couldn't think of the involvement of leaves before reading the editorial.
+Read the TreesQuestionTriggers.txt for more triggers related to trees.
