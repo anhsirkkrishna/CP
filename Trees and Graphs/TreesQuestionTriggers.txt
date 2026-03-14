@@ -6,3 +6,7 @@
 2. leaf depth
 3. subtree size
 4. root vs non-root nodes
+
+Look at leaves, look at roots and look at deepest nodes.
+The observation comes fast from there.
+These are the standard places trees questions come from.
