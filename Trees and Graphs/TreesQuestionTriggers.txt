@@ -1,3 +1,8 @@
-1. Leaves play an important role in trees.
-  See if the depth of leaves make any difference to what the question says or if leaves are important for the question.
-  This is common tree thinking.
+1. Leaf depth: Leaves play an important role in trees.
+   See if the depth of leaves make any difference to what the question says or if leaves are important for the question.
+   This is common tree thinking.
+
+1. leaf count
+2. leaf depth
+3. subtree size
+4. root vs non-root nodes
