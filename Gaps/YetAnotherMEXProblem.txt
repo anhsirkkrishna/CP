@@ -1,0 +1,3 @@
+Topic: Combinatorics, MEX
+Logic: You can make the mex = k-1 everytime. You just have to see which is the largest number that exists.
+Trigger: Thinking, observation, we want the final array to be of length k-1 but choose k elements.
