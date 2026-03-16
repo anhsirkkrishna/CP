@@ -1,7 +1,15 @@
+Prefix Suffix:
 Prefix Sum
+Chosen One (like max gcd excluding 1 no.)
+
+Implementation:
 Greedy
 Constructive
 Ans-to-Question
+
+Maths:
 Bitwise Ops
 XOR
 LCM HCF
+
+Brute Force
