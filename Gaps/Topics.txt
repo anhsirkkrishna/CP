@@ -10,6 +10,7 @@ Greedy
 -- Deletive Editing
 Ans-to-Question
 Binary Search
+Trick or Observation (See Logic Tips for these)
 
 Permutations:
 - Start, min, max, end covers the entire range (Siga ta Kymata)
