@@ -26,3 +26,9 @@ Leaves
 Root
   Diameter:
   Longest distance from node
+
+Implementation Tips:
+1. Write the major steps that you will take.
+2. Write the steps in detail.
+3. Code.
+4. Create extreme cases and some more to test.
