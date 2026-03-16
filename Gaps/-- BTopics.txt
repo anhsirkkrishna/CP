@@ -1,2 +1,3 @@
-Brute Force, greedy - Production of Snowmen
-LCM/GCD, maths - Honey Cake
+Brute Force, greedy - Production of Snowmen (24 mins)
+LCM/GCD, maths - Honey Cake (24 mins)
+Observation, mod, maths, 'Binary Search'  - Blackslex and Number Theory (18 mins)
