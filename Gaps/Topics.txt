@@ -27,6 +27,12 @@ Root
   Diameter:
   Longest distance from node
 
+Finding Logic Tips:
+1. Try simple cases. This helps you figure out some basic things and
+what the question wants or how it works.
+2. Then, try extreme cases. It helps you create the full logic in
+simple questions and tell you a lot in complex ones.
+
 Implementation Tips:
 1. Write the major steps that you will take.
 2. Write the steps in detail.
