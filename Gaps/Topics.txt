@@ -9,6 +9,7 @@ Greedy
 - Just do what they ask but maybe do some modifications or extra operations.
 -- Deletive Editing
 Ans-to-Question
+Binary Search
 
 Permutations:
 - Start, min, max, end covers the entire range (Siga ta Kymata)
