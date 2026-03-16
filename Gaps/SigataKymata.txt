@@ -1,5 +1,10 @@
 https://codeforces.com/problemset/problem/2163/B
 
+Topics: Permutation, range.
+Logic: Start to max, max to end and same for min. Then min to max covers the whole array.
+Lesson: When inequality is min < a_i < max,
+extreme values maximize coverage.
+
 I have seen that in hard rating questions, there are 2
 things that happen. One, that they say you have to do
 this and that, but actually, don't have to do anything.
