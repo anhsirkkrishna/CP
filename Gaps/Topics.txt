@@ -4,7 +4,6 @@ Chosen One (like max gcd excluding 1 no.)
 
 Implementation:
 Greedy
-Constructive
 Ans-to-Question
 
 Maths:
