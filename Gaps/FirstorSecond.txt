@@ -1,0 +1,5 @@
+https://codeforces.com/problemset/problem/2178/C
+
+Topics: Chosen One (like the question where we have to tell the max gcd if we exclude 1 element from the array.), prefix, suffix, implementation
+Logic: Choose one. 1st will be +ve, next will be abs and after chosen, every will be -ve.
+Trigger: At last, 1 element will remain. We had to choose which one.
