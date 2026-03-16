@@ -1,1 +1,2 @@
-
+Brute Force, greedy - Production of Snowmen
+LCM/GCD, maths - Honey Cake
