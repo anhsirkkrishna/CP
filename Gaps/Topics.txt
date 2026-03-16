@@ -1,8 +1,10 @@
 Prefix Suffix:
 Prefix Sum
 Chosen One (like max gcd excluding 1 no.)
+- Can never identify this
 
 Implementation:
+- Can't think of edge cases or all cases.
 Greedy
 Ans-to-Question
 
