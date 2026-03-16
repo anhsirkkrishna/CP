@@ -10,6 +10,9 @@ Greedy
 -- Deletive Editing
 Ans-to-Question
 
+Permutations:
+- Start, min, max, end covers the entire range (Siga ta Kymata)
+
 Maths:
 Bitwise Ops
 XOR
