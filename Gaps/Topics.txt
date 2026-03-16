@@ -12,3 +12,9 @@ XOR
 LCM HCF
 
 Brute Force
+
+Trees:
+Leaves
+Root
+  Diameter:
+  Longest distance from node
