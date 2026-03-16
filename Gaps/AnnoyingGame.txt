@@ -1,6 +1,6 @@
 https://codeforces.com/problemset/problem/2158/C
 
 Topics: Game Theory
-Implementation: Prefix Suffix subarray sum
+Implementation: Chosen One, Prefix Suffix subarray sum
 Trigger: We wanted to change 1 element and then see the change in the entire array.
 Prefix Suffix kadance se solve ho raha tha. Bhul gaya prefix suffix se sochna.
