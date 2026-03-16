@@ -6,6 +6,8 @@ Chosen One (like max gcd excluding 1 no.)
 Implementation:
 - Can't think of edge cases or all cases.
 Greedy
+- Just do what they ask but maybe do some modifications or extra operations.
+-- Deletive Editing
 Ans-to-Question
 
 Maths:
