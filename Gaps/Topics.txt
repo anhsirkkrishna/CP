@@ -28,6 +28,9 @@ Root
   Diameter:
   Longest distance from node
 
+Graphs:
+BFS + Binary Search (Very hot topic)
+
 Finding Logic Tips:
 1. Try simple cases. This helps you figure out some basic things and
 what the question wants or how it works.
