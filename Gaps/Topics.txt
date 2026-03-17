@@ -39,3 +39,6 @@ Implementation Tips:
 2. Write the steps in detail.
 3. Code.
 4. Create extreme cases and some more to test.
+
+CAN'T THINK TOPICS
+1. Binary Search
