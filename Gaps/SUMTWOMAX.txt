@@ -1,0 +1,9 @@
+https://www.codechef.com/problems/SUMTWOMAX
+
+One of the Best questions in a while. This question taught me a lot.
+
+Topics: Sets, Permutation, Second Max
+Logic: Store the second max to the right and left of the number. That is till where the number can come as answer.
+Trigger: Second max is classic for answer to question.
+
+To store the second max, we will maintain a set. Initial values are -2,-1,n,n+1. Then, loop from n to 1. See the 2 bigger and 2 smaller inds in the set. Those are 2 greater elements on both sides. Calculate the contribution of each num and add it to ans and then print the ans.
