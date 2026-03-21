@@ -1,0 +1,5 @@
+https://codeforces.com/contest/2206/problem/H
+
+Topic: Observation, Implementation
+Logic: Diff. bw 2 adjacent no.s never change. So, minimise 1st and then construct the rest of the array.
+Trigger: Observe that you can't change the distance bw 2 adjacent no.s ever. So, minimise 1st and then construct.
