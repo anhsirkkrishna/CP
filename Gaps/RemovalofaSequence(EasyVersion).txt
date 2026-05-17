@@ -1,0 +1,14 @@
+https://codeforces.com/problemset/problem/2169/D1
+
+Topics: Binary Search
+Logic: Use Binary Search to see if k numbers remain
+after x operations.
+Trigger: In many problems where it is necessary to
+find the 𝑘 -th element, binary search appears.
+
+We had to remove very yth number. We had to do this
+x times. Then tell the kth number. We can use Binary
+Search. For N numbers, applying oprations x times and
+see if k numbers remain. Find the smallest number with
+k remains. I was finding some pattern of remaining
+numbers. But there wasn't.
