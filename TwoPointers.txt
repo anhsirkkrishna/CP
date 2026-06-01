@@ -4,3 +4,9 @@
   If the sum is less than target, we move the rigth pointer. If it is more,
   we move the left pointer. Then, count the number of times the pointer is 
   exactly target.
+2. 2SUM problem:
+  We can find if 2 numbers in array can make target in O(n).
+  To solve the problem, we will first sort the array, then, we will do this:
+  We can have 2 pointers, at the start and end. Then, if the value is less,
+  move left pointer to right. If the value is more, move the right ponter to
+  the left.
