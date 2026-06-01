@@ -1,0 +1,6 @@
+1. Subarray Sum:
+  We can find if some subarray's sum is target in O(n).
+  What we need are 2 pointers. We will maintain the sum of the subarray.
+  If the sum is less than target, we move the rigth pointer. If it is more,
+  we move the left pointer. Then, count the number of times the pointer is 
+  exactly target.
