@@ -1,3 +1,4 @@
 1. Don't create a global array and then push the input in.
 Instead, resize the array.
 2. Don't use int for MOD. Use const. int is slow for mod. While const makes it fast.
+3. Space optimisation only works when you convert space from n sqared to n. But rarely for a dp of n. You convert it for n only when you need a few previous ones. Like in dice question. But not in coins question as coin can be of 1e6 value.
