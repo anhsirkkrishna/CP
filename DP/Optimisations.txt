@@ -1,0 +1,3 @@
+1. Don't create a global array and then push the input in.
+Instead, resize the array.
+2. Don't use int for MOD. Use const. int is slow for mod. While const makes it fast.
