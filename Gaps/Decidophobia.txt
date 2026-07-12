@@ -1,0 +1,11 @@
+https://codeforces.com/problemset/problem/2239/B
+
+Topics: Greedy, Two Pointers, Sorting.
+Logic: See what change will ai do if picked. Store and Sort, pick only positive changes.
+Trigger: They seem intertwined. But they are not. You can manually pick not pick each and calculate the cost.
+
+I couldn't see that we can see calculate the change that picking 1 will have easily.
+I thought that I have to pick first and then calculate total. But that was wrong.
+One thing that could have happened is that if I saw that using binary search, to calculate
+till which num we have to pick, I don't get the right answer, I think that maybe I don't have to pick first.
+I can just greedily decide to pick each element.
