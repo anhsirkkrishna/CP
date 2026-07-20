@@ -1,0 +1,11 @@
+https://codeforces.com/problemset/problem/2167/G
+
+Topic: DP, LIS
+Logic: Find the longest increasing weighted subsequence. Subtract it's cost from the total cost.
+Trigger: If selecting what to remove doesn't work, select what to keep.
+
+I don't think in reverse. If selecting what to remove doesn't work,
+then the next thought should be to select what to keep.
+This would have gotten you closer to the solution.
+This wasn't a hard problem.
+I just need to keep in mind that I can also think in reverse in 1600 problems.
