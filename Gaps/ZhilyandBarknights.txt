@@ -1,0 +1,10 @@
+https://codeforces.com/problemset/problem/2223/B
+
+Topic: Fenwick Tree, Maths
+Logic 1: Find all the aj*bm for all j ahead of i and find the number of aj*bm bigger than ai*bn.
+Logic 2: find all pairs satisfying ai/aj > bn/bm.
+Trigger: fix ai and bn. Can you find the second one? Maths logic is just basic observation.
+
+In logic 1, I used PBDS. But turns out, PBDS is very slow. You can use a dynamic segment tree or a fenwick tree or something.
+I couldn't find the math's logic. But I should have. This was an easy one.
+I think I should always think about some maths connection in 1600 problems.
