@@ -1,0 +1,9 @@
+https://codeforces.com/contest/2196/problem/B
+
+Topics: Greedy, maths
+Logic: Only root n jumps for nums less than n and all jumps for numbers bigger than n.
+Trigger: Maths problem. But no equation forming. So, greedy. But try to prune.
+
+In a maths question, if you can't solve the equation, you can try to run greedy.
+But, think of greedy as to how you can not run the whole loop.
+You can write conditions that stop the loop from going for too long.
