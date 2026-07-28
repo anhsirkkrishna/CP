@@ -1,0 +1,7 @@
+https://codeforces.com/problemset/problem/2205/C
+
+Topic: Implementation
+Logic: Find the lexicographically smallest array and print it. Remove all these numbers from the rest of the arrays.
+
+One thing to take away from this question is that if you are finding the implementation very hard, just make functions.
+Functions make the implementation very easy and structured. So, use functions instead of writing code in straight line.
