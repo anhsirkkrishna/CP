@@ -1,0 +1,19 @@
+https://codeforces.com/problemset/problem/2252/D
+https://codeforces.com/problemset/problem/2255/B
+
+Topic: Observation
+Logic 1: Look at the array of differences. It doesn't change.
+Just shifts. So, do that. Shift the difference array and recreate it.
+Logic 2: The segments of 1 and 0 are same before and after. So, just
+distribute all the 0s and 1s in those segments using nCr.
+Gap: Perform one operation after another. A lot of possibilities.
+
+You had to perform one operation after the other and there were a lot
+of possibilities.Impossible to do on time. So, there had to be some
+state that these arrays hold and a way that these arrays change that
+can help us to find the number of ways these arrays can hold those states.
+    Like in 1, the array's difference array never changes. Just shifts.
+So, you can change the array according to that. You don't have to see
+all the possible ways to perform the original operation on the array.
+    In 2, the segments don't change. That is the state that is 
+maintained. These are the things that you should keep in mind.
