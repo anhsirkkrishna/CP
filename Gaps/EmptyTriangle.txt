@@ -1,0 +1,9 @@
+https://codeforces.com/problemset/problem/2074/E
+
+Topic: Probabilities
+Logic: Pick a triangle. Randomly replace 1 point with the new one. Repeat.
+Trigger: You don't have any information at all. You have to guess it.
+
+This is the first question of this type that I encountered. You have questions
+that wants you to guess the next step.
+The tag is "Probabilities"
