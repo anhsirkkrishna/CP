@@ -1,0 +1,11 @@
+https://codeforces.com/group/wlb0UYQSQF/contest/710866/problem/J
+
+Tags: Prefix sum
+Logic: Use offline queries. Find till z. Then adjust in O(1).
+Trigger: You had to think that if some is extra, you have to just
+add extra of other. And that is from the index that you have picked.
+
+This is an easy question. I should have done that. But I couldn't without hint.
+It doesn't require very deep thinking. If you have to eliminate some from one
+array, you have to do it linearly because the array is sorted. Similarly, you
+have to add linearly. So, you can use prefix sum for that.
