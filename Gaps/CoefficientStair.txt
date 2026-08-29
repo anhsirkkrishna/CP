@@ -1,0 +1,11 @@
+https://atcoder.jp/contests/abc473/tasks/abc473_d
+
+Tags: Recursion, Pruning
+Logic: Use recursion to find all the possible combinations.
+But don't forget to do pruning.
+Trigger: There wasn't any other logic other than pruning.
+
+You had to prune as much as you can. I did almost a lot of
+pruning. But left a bit of it. So, the code ran a long time.
+I just added 2 lines for the last index. That was all it
+took to get AC.
