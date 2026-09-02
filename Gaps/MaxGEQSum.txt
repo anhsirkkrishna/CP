@@ -1,0 +1,11 @@
+https://codeforces.com/problemset/problem/1691/D
+
+Tags: Segment Tree
+Logic: Use Segment Tree to find if there is any range that has sum bigger than ai.
+Trigger: Instead of seeing if range is bigger than the biggest, see if any range
+that has ai as the biggest is bigger than ai.
+
+But there is one new thing that I learnt: If you have i fixed and want to find the
+j with the max prefix sum like from i to j where j goes from i to some k, you can find
+it in O(log n) using segment tree. Because for sum, you have prefix[j]-prefix[i]. Here,
+prefix[i] is constant in all. So, you just have to find the max prefix[j].
