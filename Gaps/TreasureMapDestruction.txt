@@ -1,0 +1,16 @@
+https://codeforces.com/contest/2259/problem/H
+
+Tags: Maths, Implementation
+Logic: First see where we can't make 0. Then,
+see where there has to be a 0. Then, you have
+all the left -1. There, You have to create chains.
+
+The number of operations is fibonacci of length of
+chain + 2.
+
+Trigger: There can't be 2 consecutive -1 in the chain.
+So, use PNC to find what are the number of possible
+combinations.
+
+When you see 2 3 5 8, think fibonacci. Not 2 + 0,
+2 + 1, 2 + 3, 2 + 6.
