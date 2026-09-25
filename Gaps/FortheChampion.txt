@@ -1,0 +1,5 @@
+https://codeforces.com/problemset/problem/2135/B
+
+Topics: Maths, Interactive
+Logic: Take to upper right, then upper left. Use maths equation to find x and y.
+Trigger: Maths ka question lag raha tha to equation banani thi question ki.
