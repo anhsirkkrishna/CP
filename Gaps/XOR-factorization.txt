@@ -1,0 +1,11 @@
+https://codeforces.com/contest/2180/problem/C
+
+Topic: Bitwise, Greedy
+Logic: Try to maximise the number of elements less than n by skipping the bit in different numbers.
+Trigger: Try to distribute bits to numbers individually.
+
+The thought of using maximum numbers to skip a bit should have come naturally.
+The process should have been ->
+If we skip a bit in 1 number, all the bits that need to be off can be opened in this and 1 another.
+So, we should try to maximise the number of numbers that skip a bit. Then, the whole logic would
+click.
