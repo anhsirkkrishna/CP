@@ -1,0 +1,9 @@
+https://codeforces.com/problemset/problem/2184/E
+
+Topic: Implementation
+Logic: Create segments of all <= k differences. Then find the number of subarrays.
+Trigger: Simple question dekhke pata lag raha tha.
+
+You had segments jo join bhee ho rahi thi. To unme har baar add karna tha aur purano
+ka contribution - karke naye ka + karna tha. Aur isme differences the. To purane
+segment ki length is pref non done index and next non done index.
