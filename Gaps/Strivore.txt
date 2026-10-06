@@ -1,0 +1,6 @@
+https://atcoder.jp/contests/abc171/tasks/abc171_f
+
+Topic: Combinations
+Logic: All new letters before S1 should be not equal to it. Similar for next and then next.
+Then, for last, it can be any letter. So, the total combinations are 25**insertions before Sn*
+26**insertions after Sn.
