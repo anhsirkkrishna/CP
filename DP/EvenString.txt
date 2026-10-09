@@ -1,0 +1,10 @@
+https://codeforces.com/problemset/problem/2086/D
+
+Topic: DP, Maths
+Logic: No of ways to make sum x.
+Trigger: You had to make maths equation and see that the denominator doesn't matter.
+You just had to find the ways. Then, you no. of ways is fixed -> odd!*even!/sum of ai!
+
+I couldn't see that the denominator wouldn't matter. The even and odd will make the whole
+denominator same for every case. And the odd and even are already same. So, the number of
+ways is always the same. You just had to find ways of picking those.
